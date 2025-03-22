@@ -67,7 +67,7 @@ export default function Home() {
             <div className="rounded-3xl w-full h-[326px] flex justify-center items-center absolute top-70 lg:top-50">
               <Globe
                 height={500}
-                width={450}
+                width={350}
                 backgroundColor='rgba(0,0,0,0)'
                 backgroundImageOpacity={0.5}
                 showAtmosphere

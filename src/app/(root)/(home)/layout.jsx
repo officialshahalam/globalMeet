@@ -14,7 +14,7 @@ export const metadata = {
 const HomeLayout = ({ children }) => {
   return (
     <main className='relative '>
-      {/* <Navbar/> */}
+      <Navbar/>
       {children}
     </main>
   )
