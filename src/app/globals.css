@@ -83,6 +83,18 @@
 
 /* =============================== */
 
+/* stream grid styling update */
+@media (max-width: 768px) {
+  .str-video__paginated-grid-layout__group{
+    flex-direction: column;
+  }
+  .str-video__speaker-layout{
+    flex-direction: column;
+  }
+ 
+}
+
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

@@ -15,6 +15,7 @@ import {
 import { LayoutList, Users } from 'lucide-react';
 import EndCallButton from './EndCallButton';
 import Loader from './Loader';
+import { useMediaQuery } from 'react-responsive';
 
 
 const MeetingRoom = () => {
@@ -25,6 +26,8 @@ const MeetingRoom = () => {
   const [layout, setLayout] = useState('speaker-left');
   const { useCallCallingState } = useCallStateHooks();
   const callingState = useCallCallingState();
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024 });
 
   if (callingState !== CallingState.JOINED) return <Loader />;
 
@@ -41,10 +44,10 @@ const MeetingRoom = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden pt-4 bg-blue-500 text-white">
+    <section className="relative min-h-screen w-full overflow-hidden pt-4 bg-blue-500 text-white">
       <div className="relative flex size-full items-center justify-center">
         <div className=" flex size-full max-w-[1000px] items-center">
-          <CallLayout />
+          {isMobile ? (<PaginatedGridLayout />) : (<CallLayout />)}
         </div>
         <div className={cn('h-[calc(100vh-86px)] hidden ml-2', {
           'show-block': showParticipants,
