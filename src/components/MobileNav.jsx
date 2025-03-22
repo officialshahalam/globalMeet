@@ -24,7 +24,7 @@ function MobileNav() {
         <SheetTrigger>
           <Image src="/icons/hamburger.svg" alt='menu' width={36} height={36} className='cursor-pointer sm:hidden' />
         </SheetTrigger>
-        <SheetContent side='left' className='border-none bg-dark-1'>
+        <SheetContent side='left' className='border-none bg-blue-500/60 pt-20 h-fit rounded-2xl'>
           <SheetHeader>
             <SheetTitle >
               <Link href='/' className="flex items-center gap-1">

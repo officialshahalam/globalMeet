@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <nav className='fixed backdrop-blur-xl bg-white/5 top-5 max-md:top-0  left-1/2 w-full max-w-[680px] translate-x-[-50%] flex justify-between items-center py-4 px-4 rounded-xl z-100'>
+    <nav className='fixed backdrop-blur-xl bg-white/5 top-5 max-md:top-0  left-1/2 max-w-[680px] translate-x-[-50%] flex justify-between items-center py-4 px-4 rounded-xl z-100 w-[94%] mx-auto'>
       <div className='flex flex-row gap-2'>
         {
           navLink.map((link)=>{

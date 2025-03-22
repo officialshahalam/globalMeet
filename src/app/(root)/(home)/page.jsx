@@ -13,7 +13,9 @@ export default function Home() {
   return (
     <section className="bg-blue-500 h-full lg:h-screen w-screen">
       <div className="h-full lg:h-screen w-[94%] max-w-[1400px] mx-auto">
-        <div className="w-full lg:h-full grid grid-cols-1 grid-rows-3 lg:grid-cols-4 lg:grid-rows-1 gap-2 lg:items-start">
+        <div className="w-full lg:h-full grid grid-cols-1 grid-rows-3 lg:grid-cols-4 lg:grid-rows-1 gap-2 lg:items-start relative">
+          <Image src='/icons/violetDot.svg' alt="leftCard" width={60} height={60} className="absolute top-1/3 left-1/4 bottom-0" />
+          <Image src='/icons/violetDot.svg' alt="leftCard" width={60} height={60} className="absolute top-1/5 right-1/4 bottom-0" />
           {/* left */}
           <div className="order-2 lg:order-1 lg:h-full flex flex-col gap-3 justify-between py-4 h-fit">
             <div className="flex flex-col gap-2 bg-gradient-to-br from-blue-300 to-blue-400 rounded-2xl px-4 py-5">
@@ -58,8 +60,45 @@ export default function Home() {
             </div>
           </div>
           {/* between */}
-          <div className="col-span-1 lg:col-span-2 order-1 lg:order-2 ">
-            <div className=""></div>
+          <div className="col-span-1 lg:col-span-2 order-1 lg:order-2 w-full h-full flex flex-col justify-between items-center pt-23">
+            <p className="text-center text-[46px] text-white leading-11 max-w-[420px] z-10">
+              Your Ultimate Video Conferencing Solution
+            </p>
+            <div className="rounded-3xl w-full h-[326px] flex justify-center items-center absolute top-70 lg:top-50">
+              <Globe
+                height={500}
+                width={450}
+                backgroundColor='rgba(0,0,0,0)'
+                backgroundImageOpacity={0.5}
+                showAtmosphere
+                showGraticules
+                globeImageUrl="https://cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg"
+                bumpImageUrl="https://cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png"
+                labelsData={[{ lat: 28.9845, lng: 77.7064, text: 'I am here at meerut', color: 'white', size: 100 }]}
+              />
+            </div>
+            <div className="hidden lg:flex gap-5">
+              <div className="w-[290px] h-[374px] pb-10 relative flex items-end">
+                <Image src='/icons/leftCard.svg' alt="leftCard" width={400} height={374} className="absolute bottom-0" />
+                <Image src='/icons/orangeDrop.svg' alt="leftCard" width={60} height={60} className="absolute top-15 z-10" />
+                <Image src='/icons/orangeDot.svg' alt="leftCard" width={60} height={60} className="absolute top-0 left-12 bottom-0" />
+                <Image src='/icons/orangeDot.svg' alt="leftCard" width={60} height={60} className="absolute top-30 left-16 bottom-0" />
+
+                <p className="z-10 px-6 text-2xl text-gradient">
+                  Connect with Anyone, Anywhere in the World!
+                </p>
+              </div>
+              <div className="w-[290px] h-[374px] pb-10 relative flex items-end">
+                <Image src='/icons/rightCard.svg' alt="leftCard" width={290} height={374} className="absolute bottom-0" />
+                <Image src='/icons/violetDrop.svg' alt="leftCard" width={60} height={60} className="absolute top-15 right-0 z-10" />
+                <Image src='/icons/violetDot.svg' alt="leftCard" width={60} height={60} className="absolute top-0 right-12 bottom-0" />
+                <Image src='/icons/violetDot.svg' alt="leftCard" width={60} height={60} className="absolute top-35 right-16 bottom-0" />
+
+                <p className="z-10 px-6 text-2xl text-gradient">
+                  Join Meetings Globally—No Boundaries, Just Conversations!
+                </p>
+              </div>
+            </div>
           </div>
           {/* right */}
           <MeetingTypeList />
@@ -72,9 +111,6 @@ export default function Home() {
 
 {/* <section className="w-screen min-h-screen bg-blue-500">
   <div className="grid grid-cols-4 grid-rows-1 w-full h-screen p-4 relative">
-    <Image src='/icons/violetDot.svg' alt="leftCard" width={60} height={60} className="absolute top-1/3 left-1/4 bottom-0" />
-    <Image src='/icons/violetDot.svg' alt="leftCard" width={60} height={60} className="absolute top-1/5 right-1/4 bottom-0" />
-    
 
     <div className="col-span-2 text-white pt-20 flex flex-col justify-between items-center relative">
       <p className="text-center text-[46px] leading-11 max-w-[420px] z-10">Your Ultimate Video Conferencing Solution</p>
