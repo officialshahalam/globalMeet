@@ -62,7 +62,7 @@ const MeetingTypeList = () => {
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
 
   return (
-    <section className='flex flex-col items-end justify-between h-full'>
+    <div className='order-3 lg:order-3 lg:h-full flex flex-col gap-3 justify-between py-4 h-fit max-md:mt-[-32px] max-lg:mt-[-48px]'>
       <HomeCard
         img="/icons/add-meeting.svg"
         title="New Meeting"
@@ -160,7 +160,7 @@ const MeetingTypeList = () => {
           />
         </MeetingModel>
       }
-    </section>
+    </div>
   )
 }
 

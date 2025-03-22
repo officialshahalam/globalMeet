@@ -6,7 +6,7 @@ const HomeCard = ({ className, img, title, description, handleClick }) => {
   return (
     <section
       className={cn(
-        'bg-gradient-to-br from-blue-300 to-blue-400 px-4 py-6 flex flex-col justify-between gap-16 w-full max-w-[270px] rounded-[14px] cursor-pointer',
+        'bg-gradient-to-br from-blue-300 to-blue-400 px-4 py-6 flex flex-col justify-between gap-16 w-full min-w-[270px] rounded-[14px] cursor-pointer',
         className
       )}
       onClick={handleClick}
