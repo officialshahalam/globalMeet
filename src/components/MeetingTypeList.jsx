@@ -31,7 +31,7 @@ const MeetingTypeList = () => {
 
     try {
       if (!values.dateTime) {
-        toast("Please select date and time");
+        toast.warning("Please select date and time");
         return;
       }
       const id = crypto.randomUUID();
@@ -51,11 +51,11 @@ const MeetingTypeList = () => {
       if (!values.description) {
         router.push(`/meeting/${call.id}`);
       }
-      toast("Meeting created");
+      toast.success("Meeting created");
     }
     catch (e) {
       console.log(e);
-      toast("Failed to create meeting");
+      toast.error("Failed to create meeting");
     }
   }
 
@@ -126,7 +126,7 @@ const MeetingTypeList = () => {
             className='text-center'
             handleClick={() => {
               navigator.clipboard.writeText(meetingLink);
-              toast('Link Copied');
+              toast.success('Link Copied');
             }}
           />
         )

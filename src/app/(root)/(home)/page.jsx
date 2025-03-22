@@ -64,7 +64,7 @@ export default function Home() {
             <p className="text-center text-[46px] text-white leading-11 max-w-[420px] z-10">
               Your Ultimate Video Conferencing Solution
             </p>
-            <div className="rounded-3xl w-full h-[326px] flex justify-center items-center absolute top-70 lg:top-50">
+            <div className="rounded-3xl w-fit h-[326px] flex justify-center items-center absolute top-70 lg:top-50">
               <Globe
                 height={500}
                 width={350}

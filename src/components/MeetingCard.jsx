@@ -49,7 +49,7 @@ const MeetingCard = ({ icon, title, date, isPreviousMeeting, buttonIcon1, handle
             <Button
               onClick={() => {
                 navigator.clipboard.writeText(link);
-                toast("Link Copied");
+                toast.success("Link Copied");
               }}
               className="bg-blue-500 px-6"
             >

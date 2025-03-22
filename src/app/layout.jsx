@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import "@stream-io/video-react-sdk/dist/css/styles.css";
+import { Toaster } from "sonner";
 
 
 export const metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       >
         <body >
           {children}
+          <Toaster position="top-right" richColors/>
         </body>
       </ClerkProvider>
     </html>

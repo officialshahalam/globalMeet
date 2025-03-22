@@ -52,7 +52,7 @@ const CallList = ({ type }) => {
         setRecordings(recordings);
       } catch (error) {
         console.log(error)
-        toast('Recordings are not fetch');
+        toast.error('Recordings are not fetch');
       }
     };
 

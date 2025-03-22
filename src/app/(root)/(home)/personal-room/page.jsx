@@ -67,7 +67,7 @@ const PersonalRoom = () => {
             className="bg-blue-400"
             onClick={() => {
               navigator.clipboard.writeText(meetingLink);
-              toast("Link Copied");
+              toast.success("Link Copied");
             }}
           >
             Copy Invitation
