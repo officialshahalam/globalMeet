@@ -22,7 +22,7 @@ function MobileNav() {
     <section className='w-full max-w-[264px]'>
       <Sheet>
         <SheetTrigger>
-          <Image src="/icons/hamburger.svg" alt='menu' width={36} height={36} className='cursor-pointer sm:hidden' />
+          <Image src="/icons/hamburger.svg" alt='menu' width={36} height={36} className='cursor-pointer md:hidden' />
         </SheetTrigger>
         <SheetContent side='left' className='border-none bg-blue-500/60 pt-20 h-fit rounded-2xl'>
           <SheetHeader>
