@@ -60,7 +60,7 @@ export default function Home() {
             </div>
           </div>
           {/* between */}
-          <div className="col-span-1 lg:col-span-2 order-1 lg:order-2 w-full h-full flex flex-col justify-between items-center pt-23">
+          <div className="col-span-1 lg:col-span-2 order-1 lg:order-2 w-full h-full flex flex-col justify-between items-center pt-23 pb-4">
             <p className="text-center text-[46px] text-white leading-11 max-w-[420px] z-10">
               Your Ultimate Video Conferencing Solution
             </p>

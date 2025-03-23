@@ -21,7 +21,7 @@ const MeetingTypeList = () => {
     description: '',
     link: '',
   });
-  const [callDetail, setCallDetail] = useState();
+  const [callDetail, setCallDetail] = useState(null);
 
   const { user } = useUser();
   const client = useStreamVideoClient();
@@ -67,19 +67,40 @@ const MeetingTypeList = () => {
         img="/icons/add-meeting.svg"
         title="New Meeting"
         description="Start an instant meeting"
-        handleClick={() => setMeetingState('isInstantMeeting')}
+        handleClick={() => {
+          if (!user) {
+            router.push('/sign-in');
+          }
+          else {
+            setMeetingState('isInstantMeeting')
+          }
+        }}
       />
       <HomeCard
         img="/icons/schedule.svg"
         title="Schedule Meeting"
         description="Plan your meeting"
-        handleClick={() => setMeetingState('isScheduleMeeting')}
+        handleClick={() => {
+          if (!user) {
+            router.push('/sign-in');
+          }
+          else {
+            setMeetingState('isScheduleMeeting')
+          }
+        }}
       />
       <HomeCard
         img="/icons/join-meeting.svg"
         title="Join Meeting"
         description="via invitation link"
-        handleClick={() => setMeetingState('isJoiningMeeting')}
+        handleClick={() => {
+          if (!user) {
+            router.push('/sign-in');
+          }
+          else {
+            setMeetingState('isJoiningMeeting')
+          }
+        }}
       />
       {
         !callDetail ? (
@@ -148,12 +169,12 @@ const MeetingTypeList = () => {
           title='Type the link here'
           className='text-center'
           buttonText='Join Meeting'
-          handleClick={()=>{
+          handleClick={() => {
             console.log(values.link);
             router.push(values.link)
           }}
         >
-          <Input 
+          <Input
             placeholder="meeting link"
             className="border-none bg-blue-400 focus-visible:ring-0 focus-visible:ring-offset-0"
             onChange={(e) => setValues({ ...values, link: e.target.value })}
